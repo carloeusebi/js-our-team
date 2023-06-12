@@ -2,7 +2,7 @@ const members = [
     {
         name: "Wayne Barnett",
         role: "Founder & CEO",
-        picture: "wayne-barnett-founder-ceo.png"
+        picture: "wayne-barnett-founder-ceo.jpg"
     },
     {
         name: "Angela Caroll",
@@ -31,10 +31,16 @@ const members = [
     },
 ];
 
+let list = '';
 
-for (let member of members){
-    for (let key in member){
-        console.log(`${key}: ${member[key]}`);
-    }
-    console.log('--------------')
+for (let member of members) {
+    list += `
+    <div>
+        <img src="img/${member.picture}" alt="${member.name}">
+        <p>${member.name}</p>
+        <p>${member.role}</p>
+    </div>
+    `;
 }
+
+document.body.innerHTML = list;
