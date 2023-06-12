@@ -29,4 +29,12 @@ const members = [
         role: "Graphic Designer",
         picture: "barbara-ramos-graphic-designer.jpg"
     },
-]
+];
+
+
+for (let member of members){
+    for (let key in member){
+        console.log(`${key}: ${member[key]}`);
+    }
+    console.log('--------------')
+}
