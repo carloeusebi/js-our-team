@@ -1,3 +1,5 @@
+const teamSection = document.getElementById('team');
+
 const members = [
     {
         name: "Wayne Barnett",
@@ -35,12 +37,16 @@ let list = '';
 
 for (let member of members) {
     list += `
-    <div>
-        <img src="img/${member.picture}" alt="${member.name}">
-        <p>${member.name}</p>
-        <p>${member.role}</p>
+    <div class="col">
+        <div class="member mb-3">
+            <img src="img/${member.picture}" alt="${member.name}">
+            <div class="description">
+                <p class="name">${member.name}</p>
+                <p class="role">${member.role}</p>
+            </div>
+        </div>
     </div>
     `;
 }
 
-document.body.innerHTML = list;
+teamSection.innerHTML = list;
